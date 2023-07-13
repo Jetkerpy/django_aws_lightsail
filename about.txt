@@ -1,0 +1,2 @@
+# https://github.com/LondonAppDeveloper/tutorial-django-aws-lightsail
+- JOQARIDA KORIP KETSEK BOLADI OK 
