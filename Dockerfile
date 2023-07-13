@@ -1,4 +1,4 @@
-FROM python:3.12.0b3-alpine3.18
+FROM python:3.10.12-alpine3.18
 
 ENV PYTHONUNBUFFERED 1
 # WHAT MEANS LIKE PYTHON APPLICATION WILL ALWAYS OUTPUT THE LOGS THAT
@@ -6,18 +6,16 @@ ENV PYTHONUNBUFFERED 1
 
 COPY ./requirements.txt /requirements.txt
 
-# RUN python -m venv env && \
-#     python pip install --upgrade pip && \
-#     pip install -r /requirements.txt
 
-RUN python -m venv /py && \
-    /py/bin/pip install --upgrade pip && \
-    /py/bin/pip install -r /requirements.txt
+
+RUN python -m venv env && \
+    python -m pip install --upgrade pip && \
+    python -m pip install -r /requirements.txt
 
 
 
-ENV PATH="/py/bin/:$PATH"
+ENV PATH="/env/bin/:$PATH"
 
 COPY ./app /app 
-# app jaratip alamiz localda ok
+
 WORKDIR /app

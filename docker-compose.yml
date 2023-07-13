@@ -3,5 +3,8 @@ services:
     build: 
       context: .
     volumes:
-      - ./app:/app  # loc
+      - ./app:/app  
+    ports:
+      - 8000:8000
+    command: python manage.py runserver 0.0.0.0:8000
 

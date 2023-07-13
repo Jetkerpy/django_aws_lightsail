@@ -1,2 +1,33 @@
 # https://github.com/LondonAppDeveloper/tutorial-django-aws-lightsail
 - JOQARIDA KORIP KETSEK BOLADI OK 
+
+
+--DOCKERFILE
+    - JARATIP ALAMIZ KORIP KETESIN
+    - APP FOLDER JARATIP ALDIQ
+    - REQUIREMENTS.TXT FILE JAZIP ISHINE Django==4.2.3 
+        KIRITIP KETTIK
+
+
+--DOCKER-COMPOSE.YML
+    - JARATIP ALDIQ 
+        """
+            services:
+                app:
+                    build: 
+                    context: .
+                    volumes:
+                    - ./app:/app  # loc
+        """
+        USINDAY QILIP ISLEP ALAMIZ
+
+
+--github
+    - REPOSITORY ASHIP PUSH QILAMIZ
+
+
+-- RUN 
+    docker-compose run --rm app sh -c "django-admin startproject config ."
+
+    "app" bul docker-compose.yml ishindegi service BOLADI
+    
